@@ -9,6 +9,10 @@ namespace genericosConRestricciones
             Empleados<Director> listaDirectores = new Empleados<Director>(2);
             Empleados<Secretaria> listaSecretarias = new Empleados<Secretaria>(2);
             Empleados<Electricista> listaElectricistas = new Empleados<Electricista>(2);
+            listaDirectores.AgregarEmpleado(new Director(30000));
+            listaDirectores.AgregarEmpleado(new Director(50000));
+            Console.WriteLine(listaDirectores.GetEmpleado(1).GetSalario());
+            
 
         }
     }
@@ -35,10 +39,10 @@ namespace genericosConRestricciones
         }
     }
 
-    class jubilado
+    class Jubilado
     {
         private int pension;
-        public jubilado(int pension)
+        public Jubilado(int pension)
         {
             this.pension = pension;
         }   
