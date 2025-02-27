@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace genericosConRestricciones
 {
@@ -7,6 +6,10 @@ namespace genericosConRestricciones
     {
         static void Main(string[] args)
         {
+            Empleados<Director> listaDirectores = new Empleados<Director>(2);
+            Empleados<Secretaria> listaSecretarias = new Empleados<Secretaria>(2);
+            Empleados<Electricista> listaElectricistas = new Empleados<Electricista>(2);
+
         }
     }
 
@@ -30,6 +33,15 @@ namespace genericosConRestricciones
         {
             return listaEmpleados[contador];
         }
+    }
+
+    class jubilado
+    {
+        private int pension;
+        public jubilado(int pension)
+        {
+            this.pension = pension;
+        }   
     }
 
     class Director : ISueldoEmpleados
